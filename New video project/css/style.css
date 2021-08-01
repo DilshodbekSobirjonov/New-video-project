@@ -1,0 +1,232 @@
+@import url("all.css");
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    background-color:#fff;
+    width:16px
+}
+
+/*body::-webkit-scrollbar-track {
+    background-color:#fff
+}
+body::-webkit-scrollbar-track:hover {
+    background-color:#f4f4f4
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:#babac0;
+    border-radius:16px;
+    border:5px solid #fff
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color:#a0a0a5;
+    border:4px solid #f4f4f4
+}
+
+body::-webkit-scrollbar-button {display:none}
+
+body {
+    height: 75vh;
+    width: 25vw;
+    min-width: 150px;
+    background: #fff;
+    overflow-y: scroll}
+body{min-height: 100vh}*/
+
+.wrapper {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  background-color: #2a5ad4;
+}
+
+#logo-span1, #logo-span2{
+	font-size: 35px;
+	letter-spacing: 1px;
+}
+
+#logo-span1{
+	font-weight: 900;
+	font-size: 38px;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+}
+
+ul li a {
+  margin-left: 1.5em;
+}
+
+a.logo {
+  margin-right: auto;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  font-size: 1.25em;
+}
+
+a::after {
+  content:"";
+  top: 80%;
+  border-bottom: 2px solid red;
+  transition: all 0.35s;
+  position: absolute;
+}
+
+a:hover::after {
+  transition: all 0.35s;
+}
+
+a::after {
+  right: 50%;
+  left: 50%;
+}
+
+a:hover::after {
+  right: 0;
+  left: 0;
+}
+
+.right-nav{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin: 5px;
+}
+
+img {
+	width: 40px;
+	height: 40px;
+	margin: 2.5px;
+}
+
+.right-nav .discord, .telegram, .instagram {
+	width: 50px;
+	padding: 2px;
+}
+
+.discord{
+	background-color: #2a2a72;
+	background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+.telegram{
+	background-color: #63a4ff;
+	background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+}
+
+.instagram{
+	background-color: #a40606;
+	background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+}
+
+.discord:hover,
+.telegram:hover, 
+.instagram:hover {
+	width: 100px;
+}
+
+.txt-content{
+	display: flex;
+	width: calc(100vw - 40px);
+	height: 200px;
+	margin: 10px;
+	background: ;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+				 rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	overflow-x: scroll;
+}
+
+.txt-content::-webkit-scrollbar{
+	background: transparent;
+}
+
+.txt-content::-webkit-scrollbar-thumb{
+	background: #000;
+	border-radius: 50px;
+}
+
+.txt-con{
+	display: block;
+	width: 200px;
+}
+
+.txt-content .user-name, .fast-icon, .secure-icon{
+	display: flex;
+	margin: 10px;
+	border: 2px solid black;
+	flex: 1;
+	padding: 20px;
+	flex-wrap: nowrap;
+	color: #fff;
+}
+
+.user-name{
+	background: url("https://cdn.dribbble.com/users/1162077/screenshots/4930124/communication-pattern.gif");
+}
+
+.fast-icon {
+	background: url("https://i.pinimg.com/originals/fc/e9/7e/fce97eba95fd3de922940e31f8ab8982.gif");
+}
+
+.secure-icon {
+	background: url("https://cdn.dribbble.com/users/1162077/screenshots/4930124/communication-pattern.gif");
+}
+
+#image{
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	margin-top: 20px;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+  .wrapper {
+    height: auto;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  a.logo {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-right: 0px;
+    text-align: center;
+  }
+  
+  ul {
+    width: 100%;
+    margin-bottom: 1em;
+    justify-content: space-between;
+  }
+  
+  ul li a {
+    margin-left: 0px;
+  }
+}
+
